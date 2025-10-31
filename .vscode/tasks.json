@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build C project",
+            "command": "gcc",
+            "args": [
+                "-pthread",
+                "-o", "image",
+                "main.c", "image.c"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build C project using gcc and pthread"
+        }
+    ]
+}
