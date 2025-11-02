@@ -1,0 +1,58 @@
+Script started on Sat Nov  1 21:48:36 2025
+]0;rburtson@r1n35.darwin:~/CISC372_picProject[?1034h[rburtson@r1n35 CISC372_picProject]$ ./image pic1.jpg edge
+sh: ./image: No such file or directory
+]0;rburtson@r1n35.darwin:~/CISC372_picProject[rburtson@r1n35 CISC372_picProject]$ gcc -pthread ptimag      image,.  ,c  .c -o image -lm
+[01m[Kimage.c:[m[K In function '[01m[KthreadConvolute[m[K':
+[01m[Kimage.c:77:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int row = data->startRow; row < data->endRow; row++){
+[01;32m[K     ^[m[K
+[01m[Kimage.c:77:5:[m[K [01;36m[Knote: [m[Kuse option -std=c99 or -std=gnu99 to compile your code
+[01m[Kimage.c:78:9:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+         for (int pix = 0; pix < srcImage->width; pix++){
+[01;32m[K         ^[m[K
+[01m[Kimage.c:79:13:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+             for (int bit = 0; bit < srcImage->bpp; bit++){
+[01;32m[K             ^[m[K
+[01m[Kimage.c:[m[K In function '[01m[Kconvolute[m[K':
+[01m[Kimage.c:101:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K     ^[m[K
+[01m[Kimage.c:111:14:[m[K [01;31m[Kerror: [m[Kredefinition of '[01m[Ki[m[K'
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K              ^[m[K
+[01m[Kimage.c:101:14:[m[K [01;36m[Knote: [m[Kprevious definition of '[01m[Ki[m[K' was here
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K              ^[m[K
+[01m[Kimage.c:111:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K     ^[m[K
+]0;rburtson@r1n35.darwin:~/CISC372_picProject[rburtson@r1n35 CISC372_picProject]$ gcc -pthread image.c -o image -lmp[1P[1P[1@-[1@l[1@\
+[01m[Kimage.c:[m[K In function '[01m[KthreadConvolute[m[K':
+[01m[Kimage.c:77:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int row = data->startRow; row < data->endRow; row++){
+[01;32m[K     ^[m[K
+[01m[Kimage.c:77:5:[m[K [01;36m[Knote: [m[Kuse option -std=c99 or -std=gnu99 to compile your code
+[01m[Kimage.c:78:9:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+         for (int pix = 0; pix < srcImage->width; pix++){
+[01;32m[K         ^[m[K
+[01m[Kimage.c:79:13:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+             for (int bit = 0; bit < srcImage->bpp; bit++){
+[01;32m[K             ^[m[K
+[01m[Kimage.c:[m[K In function '[01m[Kconvolute[m[K':
+[01m[Kimage.c:101:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K     ^[m[K
+[01m[Kimage.c:111:14:[m[K [01;31m[Kerror: [m[Kredefinition of '[01m[Ki[m[K'
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K              ^[m[K
+[01m[Kimage.c:101:14:[m[K [01;36m[Knote: [m[Kprevious definition of '[01m[Ki[m[K' was here
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K              ^[m[K
+[01m[Kimage.c:111:5:[m[K [01;31m[Kerror: [m[K'[01m[Kfor[m[K' loop initial declarations are only allowed in C99 mode
+     for (int i = 0; i < NUM_THREADS; i++){
+[01;32m[K     ^[m[K
+]0;rburtson@r1n35.darwin:~/CISC372_picProject[rburtson@r1n35 CISC372_picProject]$ gcc -l\thread image.c -o image -lm[1P[1P[1@p [1@ [1@-[1@s[1@t[1@d[1@=[1@c[1@9[1@9
+]0;rburtson@r1n35.darwin:~/CISC372_picProject[rburtson@r1n35 CISC372_picProject]$ exit
+exit
+
+Script done on Sat Nov  1 21:51:59 2025
